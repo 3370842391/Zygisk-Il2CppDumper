@@ -20,7 +20,8 @@
 void hack_start(const char *game_data_dir) {
     bool load = false;
     for (int i = 0; i < 10; i++) {
-        void *handle = xdl_open("/data/user/0/com.yingxiong.hero.f399/files/libil2cpp.so", 0);
+        void *handle = xdl_open("/data/data/com.yingxiong.hero.f399/files/libil2cpp.so", 0);
+        LOGI("handle %p", handle);
         if (handle) {
             load = true;
             il2cpp_api_init(handle);
